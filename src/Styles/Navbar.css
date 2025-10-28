@@ -1,67 +1,129 @@
-/* --- Default Navbar --- */
+/* ===== Navbar Base ===== */
 .navbar {
-  width: 100%;
-  height: 120px;
-  background-color: #121619;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 10px;
+  align-items: center;
+  background-color: #000000;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 10;
 }
 
-.navbar .leftSide {
+/* ===== LEFT SIDE (Logo + Hidden Links) ===== */
+.left-side {
+  flex: 1;
   display: flex;
   align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: opacity 0.3s ease;
 }
 
-.navbar .leftSide img {
+.left-side img {
+  width: 80px;
   height: auto;
-  width: 50%;
   object-fit: contain;
+  transition: opacity 0.3s ease;
 }
 
-.navbar .rightSide {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+/* Hidden links (mobile dropdown) */
+.hiddenLinks {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 160px;
+  background-color: #000000;
+  border: 1px solid #222;
+  border-radius: 8px;
+  text-align: center;
+  z-index: 5;
 }
 
-.navbar a {
-  color: white;
-  padding: 20px;
+.hiddenLinks a {
+  color: #ffffff;
   text-decoration: none;
-  margin: 10px;
+  padding: 10px 0;
+  transition: color 0.3s ease;
 }
 
-.navbar .rightSide button {
-  background-color: transparent;
+.hiddenLinks a:hover {
+  color: #007bff;
+}
+
+/* ===== RIGHT SIDE (Links + Button) ===== */
+.right-side {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.right-side a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.right-side a:hover {
+  color: #007bff;
+  transform: scale(1.05);
+}
+
+/* ===== MENU BUTTON ===== */
+.right-side button {
+  background: none;
   border: none;
-  color: white;
+  color: #ffffff;
+  font-size: 28px;
   cursor: pointer;
-  display: none; /* hide by default */
+  display: none; /* Hidden on large screens */
 }
 
-.navbar .rightSide svg {
-  font-size: 50px;
+/* ===== RESPONSIVE (Mobile) ===== */
+@media (max-width: 768px) {
+  /* Hide normal links */
+  .right-side a {
+    display: none;
+  }
+
+  /* Show menu button */
+  .right-side button {
+    display: block;
+  }
+
+  /* Initially only logo visible */
+  .hiddenLinks {
+    display: none;
+  }
+
+/* When hovering over menu button → show hiddenLinks */ 
+.right-side button:hover ~ .hiddenLinks, 
+.navbar:hover .hiddenLinks { display: flex;
+ } 
+ 
+ /* Hide logo when hovering on menu button */ 
+ .right-side button:hover ~ .left-side img, 
+ .navbar:hover .left-side img { opacity: 0; 
 }
 
-/* --- Responsive --- */
-@media only screen and (max-width: 900px) {
+  /* Optional: small spacing between logo & button */
   .navbar {
-    padding: 0 20px;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .navbar .rightSide a {
-    display: none !important;  /* hide links */
+    justify-content: space-between;
   }
 
-  .navbar .rightSide {
+  /* Center items nicely */
+  .left-side {
+    justify-content: flex-start;
+  }
+
+  .right-side {
     justify-content: flex-end;
   }
-
-  .navbar .rightSide button {
-    display: block; /* show menu button on small screens */
-  }
 }
+
