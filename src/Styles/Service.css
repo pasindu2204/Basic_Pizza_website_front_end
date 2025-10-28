@@ -1,0 +1,106 @@
+.service {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 600px;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+/* Left side background image */
+.left {
+  flex: 1;
+  min-width: 300px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px 0 0 10px;
+}
+
+/* Right side form */
+.right {
+  flex: 1;
+  min-width: 300px;
+  background-color: #fff;
+  padding: 50px 30px;
+  border-radius: 0 10px 10px 0;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.right h1.title {
+  font-size: 32px;
+  color: #ff5733;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.right form {
+  display: flex;
+  flex-direction: column;
+}
+
+.right label {
+  font-weight: 500;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.right input,
+.right textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.right input:focus,
+.right textarea:focus {
+  border-color: #ff5733;
+}
+
+.right textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Submit button */
+.right button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #ff5733; /* accent color */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100px;
+}
+
+.right button:hover {
+  background-color: #e04e2f; /* slightly darker shade */
+  transform: scale(1.05);
+}
+
+.right button:active {
+  transform: scale(0.98);
+}
+
+
+@media (max-width: 768px) {
+  .service {
+    flex-direction: column;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .right {
+    margin-top: 20px;
+    padding: 30px 20px;
+  }
+}
