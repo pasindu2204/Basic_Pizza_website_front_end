@@ -1,70 +1,102 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+*** Begin Patch
+*** Add File: README.md
++#+ 🍕 Basic Pizza Website — Frontend
++
++> A small, responsive React frontend showcasing a pizza menu, pages, and simple styling. Perfect for learning React component structure and building a friendly demo site.
++
++---
++
++## Table of Contents
++- [Description](#description)
++- [Features](#features)
++- [Setup Instructions](#setup-instructions)
++- [Usage](#usage)
++- [Contributor Guidelines](#contributor-guidelines)
++- [License](#license)
++
++---
++
++## Description
++
++This repository contains the frontend for a basic pizza website built with React. It demonstrates a clean layout with:
++
++- A top navigation bar and footer
++- A menu with individual `MenuItem` components
++- Separate pages for `Home`, `Menu`, `About`, and `Service`
++- Organized assets and styles in the `src` folder
++
++The project is ideal for learning how to structure a small React app, component composition, and simple CSS modules.
++
++## Features
++
++- Lightweight React single-page frontend
++- Responsive layout for menus and pages
++- Easy-to-follow file structure for components, pages, and styles
++- Local assets for pizza images in `src/assents`
++
++## Setup Instructions
++
++Requirements
++
++- Node.js (LTS recommended — v16 or later)
++- npm (bundled with Node) or Yarn
++
++Quick start (Windows PowerShell)
++
++```powershell
++# 1. Clone the repo (if you haven't already)
++# Replace <path> if needed — this repo is assumed to be local in the current workspace
++# git clone https://github.com/pasindu2204/Basic_Pizza_website_front_end.git
++
++# 2. Install dependencies
++npm install
++
++# 3. Run the development server
++npm start
++```
++
++Notes
++
++- The dev server will usually open at `http://localhost:3000`.
++- To create a production build, run:
++
++```powershell
++npm run build
++```
++
++If your environment uses `yarn`, replace `npm install` with `yarn` and `npm start` with `yarn start`.
++
++## Usage
++
++- Open the app in your browser (usually `http://localhost:3000`).
++- Navigate the header links to view `Home`, `Menu`, `About`, and `Service` pages.
++- To modify content, edit React components in `src/components` and pages in `src/Pages`.
++- Images are stored in `src/assents` — add or replace images there and update imports.
++
++Developer tips
++
++- Keep components small and focused.
++- Follow the existing structure for new pages or features: `src/components` for reusable parts, `src/Pages` for full pages, and `src/Styles` for page/component CSS.
++
++## Contributor Guidelines
++
++Thank you for your interest in contributing! Please follow these steps to contribute smoothly:
++
++- Fork the repository and create a descriptive branch name for your work, e.g. `feat/menu-filter` or `fix/navbar-link`.
++- Make commits that are small, focused, and well-described. Use present-tense commit messages like `Add responsive styles for Menu`.
++- Ensure the app runs locally after your changes: `npm install` and `npm start`.
++- Open a pull request with a clear description of what you changed and why. Link to any related issue if applicable.
++- Keep code style consistent. If you add or rely on linters/formatters (like ESLint/Prettier), follow their formatting rules.
++
++If you want to propose a larger feature, open an issue first to discuss design and scope.
++
++## License
++
++This project is provided under the MIT License — see the `LICENSE` file for details.
++
++© 2025 pasindu2204
++
++---
++
++If you'd like, I can also add a `LICENSE` file (MIT) and a short contributing template. Would you like me to add those now?
+*** End Patch
